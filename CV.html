@@ -20,6 +20,52 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+
+		<!-- Add css styling for the embedded pdf on this page  -->
+		<style>
+			embed {
+			    display: block;
+			    margin: 0 auto;
+					width: inherit;
+					height: inherit;
+			}
+
+			div.pdf {
+				max-width: 60em;
+				width: calc(100% - 8em);
+				height: 45em;
+				margin: auto;
+			}
+
+			@media screen and (max-width: 736px) {
+
+				div.pdf {
+					padding: 2em 0 1em 0 ;
+					height: 30em;
+					width: calc(100% - 3em);
+					margin: auto;
+				}
+			}
+
+				div.visible-phone{
+					@media (max-width: 480px) {
+						padding: 2em 0 1em 0 ;
+						height: 30em;
+						width: calc(100% - 3em);
+						margin: auto;
+					}
+				}
+
+				div.visible-desktop{
+				@media (min-width: 768px) {
+					max-width: 60em;
+					width: calc(100% - 8em);
+					height: 45em;
+					margin: auto;
+				 }
+				}
+
+		</style>
 	</head>
 	<body>
 
@@ -51,11 +97,10 @@
 				<section>
 					<header>
 						<h2>No Sidebar</h2>
-						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
 					</header>
-					<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Donec nonummy magna quis risus. Quisque eleifend. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
-					
-
+					<div class="pdf">
+						<embed srs="RCiezCV.pdf" pluginspage = "http://www.adobe.com/products/acrobat/readstep2.html">
+					</div>
 				</section>
 			</div>
 		</div>
